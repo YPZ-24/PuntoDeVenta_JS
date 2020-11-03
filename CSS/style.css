@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    display: grid;   
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+h2{
+    text-align: center;
+    font-size: 7.0rem;
+    padding: 0 0 2rem 0;
+}
+
+.form__product form{
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: 1fr;
+}
+
+input, button, select{
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.5rem;
+}
+
+input:hover, button:hover{
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="text"], input[type="number"], select{
+    border: 1px solid #7200a0;
+}
+
+button{
+    font-size: 1.7rem;
+    background: linear-gradient(40deg, rgba(183,0,255,1) 0%, rgba(72,0,255,1) 100%);
+    border: none;
+    color: white;
+}
+
+button{
+    background-color: #7200a0;
+    background: linear-gradient(40deg, rgba(72,0,255,1) 0%, rgba(183,0,255,1) 100%);
+}
+
+/*tabla*/
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table thead tr:first-child{
+    background-color: #333333;
+    color: white;
+    font-size: 2rem;
+}
+
+tbody tr:nth-child(even){
+    background-color: lightgray;
+}
+
+td{
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+tfoot tr td:first-child{
+    text-align: right;
+}
+
+tbody tr:hover{
+    background-color: rgb(194, 194, 194);
+}
+
+/*SUBMIT*/
+input[type="submit"]{
+    background: linear-gradient(40deg, rgba(255,31,31,1) 0%, rgba(189,25,25,1) 100%);
+    color: white;
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+/*CHECKBOX*/
+input[type="checkbox"]{
+    width: 2.5rem;
+}
+
+@media(min-width: 1024px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .list__products{
+        grid-column: 2/4;
+    }
+}

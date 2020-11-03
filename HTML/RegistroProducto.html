@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="container">
+            <div class="form__product">
+                <form id="form__product__register">
+                    <h2>REGISTRO</h2>
+                    <input type="text" placeholder="Producto" id="name" required />
+                    <input type="number" placeholder="Existencia" id="stock" required />
+                    <input type="number" placeholder="$ Unitario" id="cost" required />
+                    <button id="btnAddProduct">AGREGAR PRODUCTO</button>
+                </form>
+            </div>
+            <div class="list__products">
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>PRODUCTO</td>
+                            <td>EXISTENCIA</td>
+                            <td>PRECIO</td>
+                        </tr>
+                    </thead>
+                    <tbody id="list__products__body">
+                        <!--Lista con los productos-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script src="../JS/Product.js" ></script>
+    <script src="../JS/Catalogo.js" ></script>
+    <script src="../JS/RegistroProducto.js" ></script>
+
+</body>
+</html>
