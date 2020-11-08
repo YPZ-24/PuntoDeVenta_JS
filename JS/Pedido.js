@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", fillProductsSelect);
 document.getElementById("product").addEventListener("change", fillCost);
-document.getElementById("form__product__add").addEventListener('submit', onSubmit)
+const form = document.getElementById("form__product__add");
+document.getElementById("btnAgregar").addEventListener('click', addProductController)
+document.getElementById("btnComprar").addEventListener('click', comprarController)
 
 const availableProducts = getExistingProducts();
 const orders = new Array();
@@ -28,14 +30,23 @@ function fillCost(e){
     costField.value = cost;
 }
 
-function onSubmit(e){
+function addProductController(){
     const quantity = document.getElementById('quantity').value;
-    e.preventDefault();
-    e.target.reset();
+    form.reset();
     const order = addOrder(availableProducts[productIndex], quantity);
     productIndex = null;
     addOrderRow(order.getOrder());
     fillFooter();
+}
+
+function comprarController(){
+    if(orders.length === 0){
+        alert("Tu lista esta vacia")
+    }else{
+        alert("Pedido realizado");
+        form.submit();
+        console.log(orders);
+    }
 }
 
 function addOrder(product, quantity){
@@ -65,7 +76,6 @@ function addOrderRow(order){
     cell.appendChild(txt);
     row.appendChild(cell);
     for(o in order){
-        console.log(o);
         let cell = document.createElement('td');
         let txt = document.createTextNode(order[o]);
         cell.appendChild(txt);

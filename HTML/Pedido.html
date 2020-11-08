@@ -12,16 +12,16 @@
     <main>
         <div class="container">
             <div class="form__product">
-                <form id="form__product__add">
+                <form id="form__product__add" onsubmit="return false">
                     <h2>Pedido</h2>
                     <select id="product" required>
                         <option>Selecciona</option>
                     </select>
                     <input type="number" placeholder="$" id="cost" disabled required />
                     <input type="number" placeholder="Cantidad" id="quantity" required />
-                    <button>AGREGAR PRODUCTO</button>
+                    <button id="btnAgregar">AGREGAR PRODUCTO</button>
                     <hr />
-                    <input type="submit" value="COMPRAR" />
+                    <input type="submit" id="btnComprar" value="COMPRAR" />
                 </form>
             </div>
             <div class="list__products">

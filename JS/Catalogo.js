@@ -5,7 +5,6 @@ Catalogo.push(new Product("Prod2", 20, 22.2));
 Catalogo.push(new Product("Prod3", 30, 33.3));
 Catalogo.push(new Product("Prod4", 40, 44.4));
 
-
 function addProduct(name, stock, quantity){
     const product = new Product(name, stock, quantity)
     Catalogo.push(product);
